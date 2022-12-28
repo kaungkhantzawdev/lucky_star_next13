@@ -2,7 +2,7 @@ import Link from "next/link";
 const AppHeader = () => {
     return ( 
         <>
-        <header className="topbar" data-navbarbg="skin6">
+        <header className="topbar w-100" style={{ position: "fixed"}} data-navbarbg="skin6">
             <nav className="navbar top-navbar navbar-expand-md">
                 <div className="navbar-header" data-logobg="skin6">
                     <a className="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)" onclick="menu()"><i
