@@ -1,132 +1,42 @@
-import Link from "next/link";
+import Item from "../sidebar/Item";
+import Divider from "../sidebar/Divider";
+import Title from "../sidebar/Title";
 const AppSidebar = () => {
     return ( 
         <>
-            {/* <aside className="left-sidebar" data-sidebarbg="skin6">
-                <div className="scroll-sidebar" data-sidebarbg="skin6">
-                    <nav className="sidebar-nav">
-                        <ul id="sidebarnav">
-                            <li className="sidebar-item"> <a className="sidebar-link sidebar-link" href="index.html"
-                                    aria-expanded="false"><i data-feather="home" className="feather-icon"></i><span
-                                        className="hide-menu">Dashboard</span></a></li>
-                            <li className="sidebar-item"> <a className="sidebar-link sidebar-link" href="index.html"
-                                    aria-expanded="false"><i data-feather="home" className="feather-icon"></i><span
-                                        className="hide-menu">Dashboard</span></a></li>
-                            <li className="sidebar-item"> <a className="sidebar-link sidebar-link" href="index.html"
-                                    aria-expanded="false"><i data-feather="home" className="feather-icon"></i><span
-                                        className="hide-menu">Dashboard</span></a></li>
-                            <li className="list-divider"></li>
-                           
-                        </ul>
-                    </nav>
-                </div>
-            </aside> */}
-
-            <aside class="left-sidebar" style={{ position: "fixed"}} data-sidebarbg="skin6">
-            <div class="scroll-sidebar" data-sidebarbg="skin6">
-                <nav class="sidebar-nav">
+        <aside className="left-sidebar" data-sidebarbg="skin6" style={{ overflow: "auto", position: "fixed"}}>
+            <div className="scroll-sidebar" data-sidebarbg="skin6">
+                <nav className="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item">
-                            <Link class="sidebar-link sidebar-link" href="/"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined" style={{ marginRight:" 5px ", marginBottom: "3px"}}>
-                                    home
-                                </span>
-                                <span class="hide-menu">Dashboard</span>
-                            </Link>
-                        </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
-                        <li class="sidebar-item">
-                            <Link class="sidebar-link sidebar-link" href="/categories"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                category
-                                </span>
-                                <span
-                                    class="hide-menu">Categories</span>
-                            </Link>
-                        </li>
-                        <li class="sidebar-item">
-                            <Link class="sidebar-link sidebar-link" href="/products"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                storefront
-                                </span>
-                                <span
-                                    class="hide-menu">Products</span>
-                            </Link>
-                        </li>
-                        <li class="sidebar-item">
-                             <Link class="sidebar-link" href="/tickets"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px "}}>
-                                   sell
-                                </span>
-                                <span
-                                    class="hide-menu">Tickets
-                                </span>
-                            </Link>
-                        </li>
-                        <li class="sidebar-item"> 
-                            <Link class="sidebar-link sidebar-link" href="/users"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px"}}>
-                                 group
-                                </span>
-                                <span
-                                    class="hide-menu">Users</span>
-                            </Link>
-                        </li>
+                    
+                        <Item link="/" iconName="home" itemName="Dashboard"/>
+                        <Divider />
+                        <Title titleName="Applications"/>
+                        <Item link="/avatars" iconName="account_circle" itemName="Avatars"/>
+                        <Item link="/categories" iconName="category" itemName="Categories"/>
+                        <Item link="/lucky-draw" iconName="shapes" itemName="Lucky draw"/>
+                        <Item link="/products" iconName="shopping_bag" itemName="Products"/>
+                        <Item link="/media" iconName="perm_media" itemName="Media"/>
+                        <Item link="/result" iconName="receipt_long" itemName="Result"/>
+                        <Item link="/shops" iconName="store" itemName="Shops"/>
+                        <Item link="/tickets" iconName="sell" itemName="Tickets"/>
+                        <Item link="/users" iconName="group" itemName="Users"/>
 
-                        <li class="list-divider"></li>
+                        <Divider />
 
-                        <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
+                        <Title titleName="Authentication"/>
 
-                        <li class="sidebar-item"> 
-                            <Link class="sidebar-link sidebar-link" href="/auth/login"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                login
-                                </span>
-                                <span
-                                    class="hide-menu">Login</span>
-                            </Link>
-                        </li>
-                        <li class="sidebar-item">
-                            <Link class="sidebar-link sidebar-link" href="/auth/register"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                    person
-                                </span>
-                                <span
-                                    class="hide-menu">Register</span>
-                            </Link>
-                        </li>
+                        <Item link="/auth/login" iconName="login" itemName="Login"/>
 
+                        <Item link="/auth/register" iconName="person" itemName="Register"/>
 
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
-                        <li class="sidebar-item"> 
-                            <Link class="sidebar-link sidebar-link" href="/auth/login"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                edit_note
-                                </span>
-                                <span
-                                    class="hide-menu">Logout</span>
-                            </Link>
-                        </li>
-                        <li class="sidebar-item"> 
-                            <Link class="sidebar-link sidebar-link" href="/auth/login"
-                                aria-expanded="false">
-                                <span class="material-symbols-outlined"  style={{ marginRight:" 5px ",  margiBbottom:" 3px" }}>
-                                logout
-                                </span>
-                                <span
-                                    class="hide-menu">Logout</span>
-                            </Link>
-                        </li>
+                        <Divider />
+
+                        <Title titleName="Extra"/>
+
+                        <Item link="/auth/login" iconName="edit_note" itemName="Document"/>
+
+                        <Item link="/auth/login" iconName="logout" itemName="Logout"/>
                     </ul>
                 </nav>
             </div>
