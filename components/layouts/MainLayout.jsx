@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
                 <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full">
                     <AppHeader />
                     <AppSidebar />
-                    <div class="page-wrapper" style={{ display: "block"}}>
+                    <div className="page-wrapper" style={{ display: "block", marginTop: "80px"}}>
                         { children }
                         
                         <AppFooter />
